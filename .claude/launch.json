@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "raayat-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js", "4173"],
+      "port": 4173
+    }
+  ]
+}

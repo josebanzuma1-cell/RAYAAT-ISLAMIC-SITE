@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" role="img" aria-label="Raayat Islamic Nursery &amp; Primary School crest">
+  <defs>
+    <mask id="rs-crescent">
+      <rect x="0" y="0" width="520" height="470" fill="#000"/>
+      <circle cx="245" cy="162" r="52" fill="#fff"/>
+      <circle cx="267" cy="147" r="45" fill="#000"/>
+    </mask>
+    <path id="rs-arc-top" d="M 110,205 A 150,150 0 0 1 410,205" fill="none"/>
+    <path id="rs-arc-bot" d="M 88,205 A 172,172 0 0 0 432,205" fill="none"/>
+  </defs>
+
+  <!-- rings -->
+  <circle cx="260" cy="205" r="180" fill="none" stroke="#E0222B" stroke-width="7"/>
+  <circle cx="260" cy="205" r="141" fill="none" stroke="#E0222B" stroke-width="7"/>
+  <circle cx="260" cy="205" r="126" fill="none" stroke="#E0222B" stroke-width="4"/>
+
+  <!-- arched wordmark -->
+  <g fill="#00A14F" font-family="Anton, 'Arial Black', Impact, sans-serif" font-weight="400">
+    <text font-size="31">
+      <textPath href="#rs-arc-top" startOffset="50%" text-anchor="middle"
+                textLength="300" lengthAdjust="spacingAndGlyphs">RAAYAT  ISLAMIC</textPath>
+    </text>
+    <text font-size="27">
+      <textPath href="#rs-arc-bot" startOffset="50%" text-anchor="middle"
+                textLength="345" lengthAdjust="spacingAndGlyphs">NURSERY &amp; PRIMARY SCHOOL</textPath>
+    </text>
+  </g>
+
+  <!-- crescent + star -->
+  <circle cx="245" cy="162" r="52" fill="#E0222B" mask="url(#rs-crescent)"/>
+  <polygon fill="#E0222B" points="283,136 288.3,150.7 303.9,151.2 291.6,160.8 295.9,175.8 283,167 270.1,175.8 274.4,160.8 262.1,151.2 277.7,150.7"/>
+
+  <!-- fanned pages -->
+  <path fill="#E0222B" d="M257 218 L221 181 L212 191 L257 229 Z"/>
+  <path fill="#E0222B" d="M263 218 L299 181 L308 191 L263 229 Z"/>
+  <path fill="#E0222B" d="M257 225 L201 200 L196 212 L257 234 Z"/>
+  <path fill="#E0222B" d="M263 225 L319 200 L324 212 L263 234 Z"/>
+
+  <!-- open book -->
+  <path fill="#00A14F" d="M256 232 L196 215 Q188 213 188 221 L188 253 Q188 261 196 263 L256 279 Z"/>
+  <path fill="#00A14F" d="M264 232 L324 215 Q332 213 332 221 L332 253 Q332 261 324 263 L264 279 Z"/>
+
+  <!-- ribbon -->
+  <path fill="#E0222B" d="M30 380 L150 380 L150 434 L30 434 L52 407 Z"/>
+  <path fill="#E0222B" d="M490 380 L370 380 L370 434 L490 434 L468 407 Z"/>
+  <rect x="120" y="388" width="280" height="40" fill="#00A14F" stroke="#fff" stroke-width="3"/>
+  <text x="260" y="416" text-anchor="middle" fill="#fff" font-size="23" textLength="262" lengthAdjust="spacingAndGlyphs"
+        font-family="Anton, 'Arial Narrow', Impact, sans-serif">ALLAH IS THE KEY TO KNOWLEDGE</text>
+</svg>
