@@ -50,7 +50,7 @@ Pulled from the school's public Facebook page
 - **Day and boarding** — the school takes both (confirmed by the school, not stated on Facebook)
 - **Address:** Salaama–Munyonyo Road, Kampala, Uganda
 - **Phone:** 0704 178474 (from Facebook), plus **0701 617183** and **0777 100022**
-  (given by the school directly, added later)
+  (given by the school directly, added later). 0704 178474 is the WhatsApp line
 - **Email:** raayatislamicschool02@gmail.com
 - **Twitter/X:** <https://twitter.com/rayatislamicsch>
 - **Curriculum:** CBC (Competency Based Curriculum), per the school's own posts
@@ -150,6 +150,10 @@ international form WhatsApp requires: `256704178474` — country code `256` for
 Uganda, with the leading `0` dropped. A link looks like
 `https://wa.me/256704178474?text=<url-encoded message>`, so the visitor's app
 opens with a sensible message already typed.
+
+The other two numbers (0701 617183 and 0777 100022) appear on the contact page and
+in every footer, but **WhatsApp deliberately stays on 0704 178474** — the school
+chose to keep chat on that one line, so please do not "correct" it to a newer number.
 
 Where they are:
 
