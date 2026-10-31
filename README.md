@@ -47,8 +47,10 @@ Pulled from the school's public Facebook page
 - **Name:** Raayat Islamic Nursery & Primary School
 - **Motto:** Allah is the key to knowledge
 - **Description:** "A primary school that offers secular and theology education, along Salaama Road, Makindye."
+- **Day and boarding** — the school takes both (confirmed by the school, not stated on Facebook)
 - **Address:** Salaama–Munyonyo Road, Kampala, Uganda
-- **Phone:** 0704 178474
+- **Phone:** 0704 178474 (from Facebook), plus **0701 617183** and **0777 100022**
+  (given by the school directly, added later)
 - **Email:** raayatislamicschool02@gmail.com
 - **Twitter/X:** <https://twitter.com/rayatislamicsch>
 - **Curriculum:** CBC (Competency Based Curriculum), per the school's own posts
@@ -194,11 +196,20 @@ them would be dishonest. Once you have real quotes with permission, the slides i
 | Display font | Anton | Matches the condensed bold lettering on the school signboard |
 | Body font | Plus Jakarta Sans | — |
 
-`assets/img/logo.svg` is a vector redraw of the school crest (crescent, star, open
-book, ribbon with the motto). It is resolution-independent, so it stays sharp at any
-size and is used for the favicon too. The original signboard photo and the
-registration poster are kept at `assets/img/banner.webp` and `assets/img/poster.png`
-for reference — neither is used by the site itself.
+`assets/img/logo.svg` is **the school's own crest**, converted from the official
+artwork the school supplied as a PDF. It is true vector — 24 paths, no fonts and no
+embedded bitmaps — so it stays sharp at every size and is used for the favicon too.
+The lettering was already outlined in the source file, so it renders identically
+everywhere without needing a font.
+
+The crest's own colours are red `#ff2e17` and green `#00ab4f`. The site's palette
+(`--red: #E0222B`, `--green: #00A14F`) was sampled from the painted signboard before
+the official artwork arrived, so the two are very slightly different shades. Nothing
+looks wrong, but to make the whole site match the crest exactly, change those two
+tokens at the top of `assets/css/styles.css`.
+
+The signboard photo and the registration poster are kept at `assets/img/banner.webp`
+and `assets/img/poster.png` for reference — neither is used by the site itself.
 
 ---
 
