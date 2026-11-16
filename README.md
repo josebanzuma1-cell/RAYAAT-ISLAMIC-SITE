@@ -22,6 +22,27 @@ Because it is just static files, you can upload the whole folder as-is to Netlif
 Vercel, GitHub Pages, Cloudflare Pages, or any shared cPanel host. There is nothing
 to build or compile.
 
+Two GitHub Actions workflows are wired up, and both run on a push to `main`:
+
+| Workflow | Publishes to | Status |
+| --- | --- | --- |
+| `.github/workflows/deploy-pages.yml` | GitHub Pages — <https://josebanzuma1-cell.github.io/RAYAAT-ISLAMIC-SITE/> | working |
+| `.github/workflows/deploy-hostinger.yml` | Hostinger over FTPS, into `public_html` | **waiting on three secrets** |
+
+The Hostinger one is copied from the sister site `js-tots-preschool`, where it
+replaced Hostinger's own Git integration after that proved unusable. It is
+deliberately inert until `FTP_SERVER`, `FTP_USERNAME` and `FTP_PASSWORD` exist
+under **Settings > Secrets and variables > Actions**: with any of them missing
+the job finishes green having uploaded nothing, so it never reddens a push.
+
+The header comment in that file explains each secret, the optional
+`FTP_SERVER_DIR` variable, and the two mistakes that cost the most time on the
+sister site — an FTP account scoped to `public_html` needing `FTP_SERVER_DIR`
+set to `/`, and a trailing newline copied into the password giving a
+`530 Login incorrect` that no password reset fixes.
+
+Keeping both is fine: GitHub Pages stays as a free preview of the same commit.
+
 ---
 
 ## Pages
