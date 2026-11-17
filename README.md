@@ -81,6 +81,28 @@ Levels (Nursery, P.1–P.7) are taken from the school's registration poster.
 These values appear in every page's footer and on `contact.html` — search for the
 phone number or email to find them all.
 
+### Mission, vision and core values
+
+**Not from Facebook.** These are the school's own published statements, taken
+from the Vision, Mission and Core Values posters displayed in the school office
+and supplied as photographs on 2026-11-17:
+
+- **Mission:** "To foster creative and innovative learners."
+- **Vision:** "To produce morally, academically and spiritually enriched future citizens."
+- **Core values:** Integrity, Excellence, Compassion, Responsibility, Respect, Creativity
+
+All three posters also carry the motto, which independently confirms it.
+
+They are quoted on `about.html` exactly as written, with nothing added around
+them. Earlier versions of this site carried plausible-sounding mission, vision
+and values text that had been written *for* the site rather than taken from the
+school — five invented values (Taqwa, Discipline, Curiosity, Service, Honesty)
+and two invented statements. All of it is gone. If you add anything alongside
+these, take it from the school too.
+
+Note that the posters spell the school **RAAYAT**, matching the crest and the
+signboard. The GitHub repository is still named RAYAAT.
+
 ---
 
 ## Things you should replace before going live
