@@ -123,7 +123,7 @@
     };
 
     var today = new Date();
-    var YEAR = today.getFullYear();
+    var year = today.getFullYear();   // moves when the arrows cross December/January
     var view = today.getMonth();
 
     function inTerm(m, d) {
@@ -152,7 +152,7 @@
     }
 
     function render() {
-      $('#calTitle').textContent = MONTHS[view] + ' ' + YEAR;
+      $('#calTitle').textContent = MONTHS[view] + ' ' + year;
 
       calGrid.innerHTML = '';
       DOW.forEach(function (d) {
@@ -162,9 +162,9 @@
         calGrid.appendChild(h);
       });
 
-      var first = new Date(YEAR, view, 1).getDay();
-      var days  = new Date(YEAR, view + 1, 0).getDate();
-      var prevDays = new Date(YEAR, view, 0).getDate();
+      var first = new Date(year, view, 1).getDay();
+      var days  = new Date(year, view + 1, 0).getDate();
+      var prevDays = new Date(year, view, 0).getDate();
 
       for (var i = first - 1; i >= 0; i--) {
         calGrid.appendChild(cell(prevDays - i, 'is-muted'));
@@ -173,7 +173,7 @@
         var cls = '';
         var term = inTerm(view, d);
         if (term) cls = 'is-event';
-        if (d === today.getDate() && view === today.getMonth() && YEAR === today.getFullYear()) {
+        if (d === today.getDate() && view === today.getMonth() && year === today.getFullYear()) {
           cls = 'is-today';
         }
         calGrid.appendChild(cell(d, cls, term));
@@ -212,8 +212,8 @@
     }
 
     var cPrev = $('#calPrev'), cNext = $('#calNext');
-    if (cPrev) cPrev.addEventListener('click', function () { view = (view + 11) % 12; render(); });
-    if (cNext) cNext.addEventListener('click', function () { view = (view + 1) % 12; render(); });
+    if (cPrev) cPrev.addEventListener('click', function () { if (view === 0) { view = 11; year--; } else view--; render(); });
+    if (cNext) cNext.addEventListener('click', function () { if (view === 11) { view = 0; year++; } else view++; render(); });
     render();
   }
 
@@ -261,7 +261,7 @@
       msg.textContent = ok
         ? 'Thank you — please also send your name to raayatislamicschool02@gmail.com so we can add you.'
         : 'Please enter a valid email address.';
-      msg.style.color = ok ? '#6FE3A6' : '#FF9AA0';
+      msg.style.color = ok ? '#7DD3F5' : '#FF9AA0';
       if (ok) input.value = '';
     });
   }

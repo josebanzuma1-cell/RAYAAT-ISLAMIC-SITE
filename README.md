@@ -111,7 +111,7 @@ signboard. The GitHub repository is still named RAYAAT.
 
 The Facebook page requires a login to download photos, so instead of using stock
 images of other people's children, every picture slot is filled with an original
-geometric panel built in the school's green and red (Islamic 8-point star tiling with
+geometric panel built in the site's blue and red (Islamic 8-point star tiling with
 a motif). They look deliberate, but **real photographs of Raayat pupils and
 classrooms will be far better**.
 
@@ -141,7 +141,7 @@ The calendar on the home page is **fully working**, but the dates it shows are t
 usual Ugandan three-term shape, not confirmed dates. Edit the two tables near the top
 of the calendar section in `assets/js/main.js`:
 
-- `TERMS` — the term windows that shade the calendar green
+- `TERMS` — the term windows that shade the calendar blue
 - `MILESTONES` — the "key dates" list, keyed by month (`0` = January)
 
 The page already carries a visible note telling parents to confirm with the office.
@@ -236,8 +236,9 @@ them would be dishonest. Once you have real quotes with permission, the slides i
 
 | Token | Value | Where it comes from |
 | --- | --- | --- |
-| Green | `#00A14F` | School crest and signboard |
-| Deep green | `#046A38` | Headings, buttons |
+| Blue (`--brand`) | `#20A7DB` | Chosen 2026-11-25 to replace the signboard green `#00A14F` |
+| Deep blue (`--brand-deep`) | `#056386` | Headings, buttons, any white text on blue |
+| Ink (`--brand-ink`) | `#062B3A` | Footer and dark sections; text placed on `#20A7DB` |
 | Red | `#E0222B` | Crest, signboard lettering, accents |
 | Cream | `#FBF6EC` | Alternating section background |
 | Display font | Anton | Matches the condensed bold lettering on the school signboard |
@@ -249,11 +250,18 @@ embedded bitmaps — so it stays sharp at every size and is used for the favicon
 The lettering was already outlined in the source file, so it renders identically
 everywhere without needing a font.
 
-The crest's own colours are red `#ff2e17` and green `#00ab4f`. The site's palette
-(`--red: #E0222B`, `--green: #00A14F`) was sampled from the painted signboard before
-the official artwork arrived, so the two are very slightly different shades. Nothing
-looks wrong, but to make the whole site match the crest exactly, change those two
-tokens at the top of `assets/css/styles.css`.
+The crest's own colours are red `#ff2e17` and green `#00ab4f`, and **the crest stays
+that way** — it is the school's official artwork. The rest of the site was green too
+until 2026-11-25, when it moved to sky blue `#20A7DB`. The red (`--red: #E0222B`,
+sampled from the signboard) did not change.
+
+`#20A7DB` is too light to carry white text (2.8:1, where 4.5:1 is the minimum), so
+the tokens at the top of `assets/css/styles.css` come as a set: text that sits
+*on* `--brand` uses `--brand-ink`, and white text sits on `--brand-deep` or darker.
+The other shades were derived from the old greens at the same brightness, so every
+text/background pairing kept the contrast it had. To change the colour again, edit
+those tokens, then the hard-coded shades in the `assets/img/*.svg` panels (all except
+`logo.svg`). WhatsApp's own greens (`--wa`) are deliberately left alone.
 
 The signboard photo and the registration poster are kept at `assets/img/banner.webp`
 and `assets/img/poster.png` for reference — neither is used by the site itself.
